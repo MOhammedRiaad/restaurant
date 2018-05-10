@@ -346,12 +346,16 @@ label {
 }
 
 #reviews-list li {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0a0909+0,0a0909+28,f9f9f9+28 */
-background: #0a0909; /* Old browsers */
-background: -moz-linear-gradient(top, #0a0909 0%, #0a0909 39px, #f9f9f9 39px); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #0a0909 0%,#0a0909 39px,#f9f9f9 39px); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #0a0909 0%,#0a0909 39px,#f9f9f9 39px); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+  background: #0a0909;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #0a0909 0%, #0a0909 39px, #f9f9f9 39px);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #0a0909 0%, #0a0909 39px, #f9f9f9 39px);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0a0909 0%, #0a0909 39px, #f9f9f9 39px);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', endColorstr='#f9f9f9', GradientType=0);
+  /* IE6-9 */
   border: 2px solid #f3f3f3;
   list-style-type: none;
   margin: 0 0 30px;
@@ -366,14 +370,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
 }
 
 #reviews-list li>p:nth-child(1) {
- 
   width: 50%;
   align-self: center;
   color: orange;
 }
 
 #reviews-list li>p:nth-child(2) {
- align-self: center;
+  align-self: center;
   width: 50%;
   text-align: right;
   color: #ccc
@@ -384,8 +387,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
   color: #f18200;
 }
 
-
-
 #restaurant-hours td {
   color: #666;
 }
@@ -393,37 +394,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
 /* ====================== Responsive Query ====================== */
 
 @media only screen and (max-width: 600px) {
-  /* #breadcrumb {
-    width: 100%;
-  }
-  .inside #map-container {
-    height: 87%;
-    position: fixed;
-    right: 0;
-    top: 140px;
-    width: 45%;
-  } */
-  
   .inside {
     display: flex;
     flex-direction: row;
     width: 100vw
   }
-
   .inside header {
     order: 0;
     width: 100vw;
   }
-
   header {
     display: flex;
     flex-direction: column;
   }
-
   header nav {
     order: 0;
   }
-
   header #breadcrumb {
     order: 1;
     width: 100vw;
@@ -431,7 +417,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
     padding-left: 0;
     text-align: center;
   }
-
   .inside #map-container {
     order: 2;
     top: 130px;
@@ -439,7 +424,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
     height: 300px;
     width: 100vw;
   }
-
   .inside #restaurant-container {
     order: 3;
     position: relative;
@@ -448,30 +432,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
     margin: auto;
     text-align: center;
   }
-
   .inside #reviews-container {
     width: 100vw;
     padding: 5px;
     margin: auto;
-    
   }
-
   .inside #footer {
     order: 4;
     width: 100vw;
     padding-left: 0;
     padding-right: 0;
     padding-top: 10px;
-
-   
   }
-
   #reviews-list {
     width: 100vw;
   }
-
   #reviews-container h2 {
     text-align: center;
   }
-
 }
