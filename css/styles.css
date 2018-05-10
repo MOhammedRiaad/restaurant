@@ -67,6 +67,7 @@ section {
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  width: 100vw;
 }
 
 #footer {
@@ -166,6 +167,10 @@ nav h1 a {
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
+}
+
+label {
+  visibility: hidden;
 }
 
 .filter-options select {
@@ -318,17 +323,13 @@ nav h1 a {
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 140px 20px 30px;
   width: 45%;
 }
 
 #restaurant-container {
   display: flex;
   flex-direction: column;
-}
-
-#reviews-container {
-  padding: 30px 40px 80px;
 }
 
 #reviews-container h2 {
@@ -345,7 +346,12 @@ nav h1 a {
 }
 
 #reviews-list li {
-  background-color: #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0a0909+0,0a0909+28,f9f9f9+28 */
+background: #0a0909; /* Old browsers */
+background: -moz-linear-gradient(top, #0a0909 0%, #0a0909 39px, #f9f9f9 39px); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #0a0909 0%,#0a0909 39px,#f9f9f9 39px); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #0a0909 0%,#0a0909 39px,#f9f9f9 39px); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
   border: 2px solid #f3f3f3;
   list-style-type: none;
   margin: 0 0 30px;
@@ -360,26 +366,112 @@ nav h1 a {
 }
 
 #reviews-list li>p:nth-child(1) {
-  padding-top: 20px;
+ 
   width: 50%;
+  align-self: center;
+  color: orange;
 }
 
 #reviews-list li>p:nth-child(2) {
-  padding-top: 20px;
+ align-self: center;
   width: 50%;
-  justify-content: flex-end;
+  text-align: right;
+  color: #ccc
 }
 
 #reviews-list li>p:nth-child(3) {
   width: 100%;
+  color: #f18200;
 }
 
-#reviews-list li p {
-  margin: 0 0 10px;
-}
+
 
 #restaurant-hours td {
   color: #666;
 }
 
 /* ====================== Responsive Query ====================== */
+
+@media only screen and (max-width: 600px) {
+  /* #breadcrumb {
+    width: 100%;
+  }
+  .inside #map-container {
+    height: 87%;
+    position: fixed;
+    right: 0;
+    top: 140px;
+    width: 45%;
+  } */
+  
+  .inside {
+    display: flex;
+    flex-direction: row;
+    width: 100vw
+  }
+
+  .inside header {
+    order: 0;
+    width: 100vw;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav {
+    order: 0;
+  }
+
+  header #breadcrumb {
+    order: 1;
+    width: 100vw;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .inside #map-container {
+    order: 2;
+    top: 130px;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+
+  .inside #restaurant-container {
+    order: 3;
+    position: relative;
+    width: 100vw;
+    padding: 140px 5px 0 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .inside #reviews-container {
+    width: 100vw;
+    padding: 5px;
+    margin: auto;
+    
+  }
+
+  .inside #footer {
+    order: 4;
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+
+   
+  }
+
+  #reviews-list {
+    width: 100vw;
+  }
+
+  #reviews-container h2 {
+    text-align: center;
+  }
+
+}

@@ -79,8 +79,8 @@ window.initMap = () => {
   self.map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: loc,
-    scrollwheel: false
-  });
+    scrollwheel: false ,
+    });
   updateRestaurants();
 };
 
@@ -178,7 +178,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 };
-
+/**
+ * Add The service worker .
+ */
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('js/sw/sw.js')
@@ -197,3 +199,4 @@ if ('serviceWorker' in navigator) {
     console.log('Registration failed with ' + error);
   });
 }
+
